@@ -1,5 +1,5 @@
 
-.jumbotron{
+..jumbotron{
  
     background-image: url(ima.jpg);
     height: 100vh;
@@ -92,7 +92,8 @@
        margin-bottom: 30px;
        padding-left: 80px; }
        .footer .contact-us .contact-info {
-         margin-left: 50px; }
+         margin-left: 50px;
+         color: rgb(248, 218, 223); }
        .footer .contact-us.contact-us-last {
          margin-left: -80px; }
      .footer .contact-icon i {
@@ -403,7 +404,7 @@
   
   
   .cont_breadcrumbs {
-    margin-left: 170px;
+    margin-left: 250px;
     margin-top: 66px;
     width: 500px;
   
