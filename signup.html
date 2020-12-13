@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <!-- build:css css/main.css -->
@@ -24,18 +25,27 @@
 
     <div class="cont_principal">
         <div class="cont_breadcrumbs">
-          
+
             <div class="cont_breadcrumbs_1">
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="#">Sign Up</a></li>
                 </ul>
-            
+
             </div>
         </div>
     </div>
-    
     <header class="jumbotron" id="jum">
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)">&times;</a>
+            <div class="overlay-content">
+                <h1>
+                    Welcome Aboard ! Kindly proceed to log in page by clicking here
+                </h1>
+                <a href>Login here</a>
+            </div>
+        </div>
 
         <nav class="navbar navbar-expand-lg fixed-top ">
             <div class="container" id="nav">
@@ -52,12 +62,12 @@
                 <div class="collapse navbar-collapse" id="Navbar">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active ">
-                            <a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg "></span>Home<span
+                            <a class="nav-link" href="index.html"><span class="fa fa-home fa-lg ">&nbsp;</span>Home<span
                                     class="sr-only">(current)</span></a>
-                        </li>
+                        </li>&nbsp;
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span class="fa fa-hands-helping fa-lg"></span>Help</a>
-                        </li>
+                            <a class="nav-link" href="#"><span class="fa  fa-handshake-o fa-lg">&nbsp;</span>Help</a>
+                        </li>&nbsp;
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
@@ -78,57 +88,16 @@
                             data-placement="left" data-target="#exampleModal" title="Join our Community"
                             id="butt">Join</button>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
                         <div class="dropdown-content" style="left:0;">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="stories.html">Share your story</a>
+                            <a href="signup.html">Sign Up</a>
+                            <a href="signin.html">Sign In</a>
                         </div>
                     </div>
 
                     <!-- Button trigger modal -->
 
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" placeholder="Enter email">
-                                            <small id="emailHelp" class="form-text text-muted">We'll never share your
-                                                email with anyone else.</small>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                                placeholder="Password">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <input type="text" class="form-control" placeholder="First name">
-                                            </div>
-                                            <div class="col">
-                                                <input type="text" class="form-control" placeholder="Last name">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search Issues"
                             aria-label="Search">
@@ -153,18 +122,98 @@
 
 
                 <div class="container align-items-center" id="css">
-                    
+
                     <div class="main">
-                        <img class="center rounded-circle" src="wo2.jpg" width="60" height="60" class="d-inline-block align-top rounded-circle" alt="">
+                        <style>
+                            .overlay {
+                                height: 100%;
+                                width: 0;
+                                position: fixed;
+                                z-index: 1000;
+                                top: 0;
+                                left: 0;
+                                background-image: url(volunteers.jpg);
+                                filter: blur(8px);
+
+
+
+                                overflow-x: hidden;
+                                transition: 0.5s;
+                            }
+
+                            .overlay-content {
+                                position: absolute;
+                                top: 25%;
+                                width: 100%;
+                                text-align: center;
+                                margin-top: 30px;
+
+
+                            }
+
+                            .overlay a {
+                                background-color: rgb(0, 0, 0);
+                                /* Fallback color */
+                                background-color: rgba(0, 0, 0, 0.4);
+                                /* Black w/opacity/see-through */
+                                color: white;
+                                font-weight: bold;
+                                border: 3px solid #f1f1f1;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                z-index: 2;
+                                width: 80%;
+                                padding: 20px;
+                                text-align: center;
+
+                            }
+
+                            .overlay a:hover,
+                            .overlay a:focus {
+                                color: #7EE1D6;
+                            }
+
+                            .overlay .closebtn {
+                                position: absolute;
+                                top: 20px;
+                                right: 45px;
+                                font-size: 60px;
+                            }
+
+                            @media screen and (max-height: 450px) {
+                                .overlay a {
+                                    font-size: 20px
+                                }
+
+                                .overlay .closebtn {
+                                    font-size: 40px;
+                                    top: 15px;
+                                    right: 35px;
+                                }
+                            }
+                        </style>
+
+                        <img class="center rounded-circle" src="wo2.jpg" width="60" height="60"
+                            class="d-inline-block align-top rounded-circle" alt="">
                         <p class="sign" align="center"">Sign Up</p>
-                        <form class="form1">
-                          <input class="un" type="text" align="center" placeholder="Create Your Username">
-                          <input class="un" type="text" align="center" placeholder="Enter Your Email">
-                          <input class="pass" type="password" align="center" placeholder="Enter Your Password">
-                          <a href="signin.html" class="submit" align="center">Sign Up</a><br><br>
-                          <p style="color: black;" align="center">Already Registered? <a href="./signin.html">Click here!</a></p>
-                        </form>                                    
+                        <form class=" form1">
+
+                            <input class="un" type="text" align="center" placeholder="Create Your Username">
+                            <input class="un" type="text" align="center" placeholder="Enter Your Email">
+                            <input class="pass" type="password" align="center" placeholder="Enter Your Password">
+
+
+                            <a href="#" class="submit" align="center" id="openNav">Sign Up</a><br><br>
+
+
+
+                        <p style="color: black;" align="center">Already Registered? <a href="./signin.html">Click
+                                here!</a></p>
+                        </form>
                     </div>
+
 
 
 
@@ -184,15 +233,15 @@
 
 
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer" style="margin-top: 47px;">
         <div class="container">
-            <div class="row">
+            <div class="row row-content">
                 <div class="col-md-4">
                     <div class="footer-box-info">
                         <a href="index.html" class="footer-logo">
                             <img src="fem.jpeg" alt="footer_logo" class="img-fluid">
                         </a>
-                        <p class="footer-info-text">
+                        <p style="color: black;"" class="footer-info-text">
                             Description
                         </p>
                         <div class="footer-social-link">
@@ -238,7 +287,7 @@
                                 </div>
                                 <div class="contact-info">
                                     <h3>Mumbai, India</h3>
-                                    <p>VJTI</p>
+                                    <p style="color: rgb(248, 218, 223);">VJTI</p>
                                 </div>
                             </div>
                         </div>
@@ -249,7 +298,7 @@
                                 </div>
                                 <div class="contact-info">
                                     <h3>+91 9876543210</h3>
-                                    <p>Give us a call</p>
+                                    <p style="color: rgb(248, 218, 223);">Give us a call</p>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +308,7 @@
                         <div class="col-md-6">
                             <div class="footer-widget footer-left-widget">
                                 <div class="section-heading">
-                                    <h3>Useful Links</h3>
+                                    <h3 style="color: rgb(248, 218, 223);">Useful Links</h3>
                                     <span class="animate-border border-black"></span>
                                 </div>
                                 <ul>
@@ -284,11 +333,11 @@
                         <div class="col-md-6">
                             <div class="footer-widget">
                                 <div class="section-heading">
-                                    <h3>Subscribe</h3>
+                                    <h3 style="color: rgb(248, 218, 223);">Subscribe</h3>
                                     <span class="animate-border border-black"></span>
                                 </div>
-                                <p>
-                                    Subscribe to get the notifications!
+                                <p style="color:white;">&nbsp;
+                                    Subscribe to get the notifications <span  class="fa fa-bell fa-lg"></span>
                                 <form action="#">
                                     <div class="form-row">
                                         <div class="col footer-form">
