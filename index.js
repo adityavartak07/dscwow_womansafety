@@ -58,14 +58,10 @@ window.onload = function () {
     document.body.appendChild(css);
 };
 
-
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navb").style.top = "0";
-    } else {
-        document.getElementById("navb").style.top = "-50px";
-    }
-    prevScrollpos = currentScrollPos;
-}
+$('#openNav').on('click', function() {
+    $('#myNav').css("width", "100%");
+  });
+  
+  $('#closeNav').on('click', function() {
+    $('#myNav').css("width", "0%");
+  });
